@@ -12,7 +12,7 @@ const Overview = () => {
         <section className="widgets">
             <Widgets/>
         </section>
-        <main >
+        <main className='content'>
               <div class="current-class">
                 <h2>Current Class</h2>
                 <div class="class-details">

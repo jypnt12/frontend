@@ -31,14 +31,14 @@ code {
 }
 
 
-h2{
+/* h2{
   display: flex;
   text-align: center;
   justify-content: space-between;
   padding-right: 20px;
-}
+} */
 
-button {
+/* button {
   display: inline-block;
   padding: 5px;
   font-size: 14px;
@@ -47,9 +47,8 @@ button {
   cursor: pointer;
   border: 0px solid var(--main); 
   color: var(--main); 
-  /* border-radius: 5px;  */
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
-}
+} */
 
 /* button {
   display: inline-block;
@@ -65,30 +64,30 @@ button {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
 } */
 
-button:hover {
+/* button:hover {
   background-color:var(--main); 
   color: #fff; 
   border-color: var(--main); 
-}
+} */
 
 
-button:active,
+/* button:active,
 button:focus {
   outline: none; 
   background-color: var(--main); 
   color: #fff; 
   border-color: var(--main);
-}
+} */
 
 /* Disabled styles */
-button:disabled {
+/* button:disabled {
   cursor: not-allowed; 
   opacity: 0.6; 
   pointer-events: none; 
-}
+} */
 
 
-button.primary-button {
+/* button.primary-button {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -101,14 +100,14 @@ button.primary-button {
   background-color: #fff; 
   border-radius: 5px; 
   transition: background-color 0.3s, color 0.3s, border-color 0.3s; 
-}
+} */
 
 
-button.primary-button:hover {
+/* button.primary-button:hover {
   color: #fff; 
   background-color: var(--sub); 
   border-color: var(--sub); 
-}
+} */
 ul {
   list-style: none;
   padding: 0;
@@ -125,48 +124,52 @@ a {
 }
 
 
+
+
+
 /* Style for input elements */
-input {
+/* input,select {
+  max-width: 400px;
   width: 100%;
   padding: 10px;
-  margin: 20px 0;
+  margin: 10px 0;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   font-size: 16px;
-}
+} */
 
 /* Focus styles */
-input:focus {
+/* input:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
+} */
 
 /* Placeholder color */
-input::placeholder {
+/* input::placeholder {
   color: #aaa;
-}
+} */
 
 /* Disabled styles */
-input:disabled {
+/* input:disabled {
   background-color: #f4f4f4;
   cursor: not-allowed;
-}
+} */
 
-/* Style for labels */
-label {
+/* label {
   display: block;
-  margin-bottom: 8px;
   font-weight: bold;
-}
+} */
 
 /* Add padding to the label for better alignment */
-label + input {
+/* label + input {
   margin-top: 4px;
 }
-
+label + select {
+  margin-top: 4px;
+} */
 .row {
   display: flex;
   flex-wrap: wrap; 

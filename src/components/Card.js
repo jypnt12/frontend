@@ -11,9 +11,13 @@ const Card = ({subject, onClick}) => {
                 <h2>{subject.name}</h2>
                 <p>{subject.description}</p>
                 <p>{subject.instructor}</p>
-                <p>{subject.schedule.time}</p>
+                {/* <p>{subject.schedule.time}</p> */}
             </div>
             <div class="card-footer">
+              {subject.schedule!== undefined?
+              <button className='download-button'>Download</button>: <p></p>
+              
+              }
             </div>
         </div>
   )

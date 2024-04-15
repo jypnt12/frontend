@@ -1,4 +1,4 @@
-import { StudentsContext } from "../context/UserContext";
+import { StudentsContext } from "../context/StudentContext";
 
 import { useContext } from "react";
 

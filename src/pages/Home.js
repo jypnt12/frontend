@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import landingImage from '../assets/images/sample.jpg'
+
+
+
 const Home = () => {
 
+  const [mode, setMode] = useState('light');
+  
   
   return (
     <div>

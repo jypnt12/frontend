@@ -1,21 +1,55 @@
 import React from 'react'
 
-const Announcement = () => {
+import Avatar from '@mui/material/Avatar';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  maxWidth: 400,
+}));
+
+const message = `Truncation should be conditionally applicable on this long line of text
+ as this is a much longer line than what the container can support.`;
+
+export default function Announcement() {
   return (
-    <div class="announcements-section">
-  <div class="announcement-content">
-    <h2 class="announcement-title">Important Announcement 1</h2>
-    <p class="announcement-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id metus id urna imperdiet posuere.</p>
-  </div>
-  
-  <div class="announcement-content">
-    <h2 class="announcement-title">Important Announcement 2</h2>
-    <p class="announcement-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id metus id urna imperdiet posuere.</p>
-  </div>
-</div>
-
-
-  )
+    <Box sx={{ flexGrow: 1, overflow: 'hidden', px: 1 }}>
+      <Item
+        sx={{
+          my: 1,
+          mx: 'auto',
+          p: 1,
+        }}
+      >
+        <Stack spacing={2} direction="row" alignItems="center">
+          <Avatar>W</Avatar>
+          <Typography noWrap>{message}</Typography>
+        </Stack>
+      </Item>
+      <Item
+        sx={{
+          my: 1,
+          mx: 'auto',
+          p: 1,
+        }}
+      >
+        <Stack spacing={2} direction="row" alignItems="center">
+          <Stack>
+            <Avatar>W</Avatar>
+          </Stack>
+          <Stack sx={{ minWidth: 0 }}>
+            <Typography noWrap>{message}</Typography>
+          </Stack>
+        </Stack>
+      </Item>
+    </Box>
+  );
 }
-
-export default Announcement

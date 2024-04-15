@@ -29,6 +29,9 @@ import Messages from './pages/backoffice/Messages';
 import Announcement from './pages/backoffice/Announcement';
 import Settings from './pages/backoffice/Settings';
 import Result from './pages/backoffice/Result';
+import Profile from './pages/backoffice/Profile';
+import Class from './pages/backoffice/Class';
+import AddClass from './forms/AddClass';
 
 
 const router = createBrowserRouter([
@@ -64,44 +67,57 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/dashboard',
+    path: '/b',
     element: <Dashboard/>,
     errorElement: <ErrorPage />,
     children: [
       {
-        path:'/dashboard',
+        path:'/b/dashboard',
         element: <Overview/>
       },
       {
-        path:'/dashboard/syllabus',
+        path:'/b/syllabus',
         element: <Syllabus/>
       },
       {
-        path:'/dashboard/classroom',
+        path:'/b/classroom',
         element: <Classroom/>
+       
       },
       {
-        path:'/dashboard/schedule',
+        path:'/b/classroom/:classId',
+        element: <Class/>
+       
+      },
+      {
+        path:'/b/schedule',
         element: <Schedule/>
       },
       {
-        path:'/dashboard/results',
+        path:'/b/results',
         element: <Result/>
       },
       {
-        path:'/dashboard/messages',
+        path:'/b/messages',
         element: <Messages/>
       },
       {
-        path:'/dashboard/announcements',
+        path:'/b/announcements',
         element: <Announcement/>
       },
       {
-        path:'/dashboard/settings',
+        path:'/b/settings',
         element: <Settings/>
       },
-
-    ]
+      {
+        path:'/b/profile',
+        element: <Profile/>
+      },
+      {
+        path:'/b/add-class',
+        element: <AddClass/>
+      },
+    ] 
   }        
 
 ]);

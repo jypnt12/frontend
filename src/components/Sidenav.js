@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import MenuIcon from '@mui/icons-material/Menu';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import GroupsIcon from '@mui/icons-material/Groups';
@@ -14,11 +14,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 const Sidenav = () => {
 
-  const [isSidenavOpen, setIsSidenavOpen] = useState(true)
-
-  const toggleSideNav = ()=>{
-    setIsSidenavOpen(!isSidenavOpen);
-  }
+  
 
   return (
 
@@ -27,14 +23,14 @@ const Sidenav = () => {
             <h2 ><span>Main menu</span> </h2>
           </div>
             <ul>
-                <li><Link to='/dashboard'><DashboardIcon/><span >Dashboard</span> </Link></li>
-                <li><Link to='/dashboard/classroom'><GroupsIcon/><span >Classroom</span></Link></li>
-                <li><Link to='/dashboard/syllabus'><LibraryBooksIcon/><span  >Syllabus</span></Link></li>
-                <li><Link to='/dashboard/schedule'><WatchLaterIcon/><span >Schedule</span></Link></li>
-                <li><Link to='/dashboard/results'><GradingIcon/><span >Results</span></Link></li>
-                <li><Link to='/dashboard/messages'><ChatIcon/><span >Chats</span></Link></li>
-                <li><Link to='/dashboard/announcements'><CampaignIcon/><span >Announcements</span></Link></li>
-                <li><Link to='/dashboard/settings'><SettingsIcon/><span >Settings</span></Link></li>
+                <li><NavLink to='/b/dashboard' ><DashboardIcon/><span >Dashboard</span> </NavLink></li>
+                <li><NavLink to='/b/classroom'  ><GroupsIcon/><span >Classroom</span></NavLink></li>
+                <li><NavLink to='/b/syllabus'><LibraryBooksIcon/><span  >Syllabus</span></NavLink></li>
+                <li><NavLink to='/b/schedule'><WatchLaterIcon/><span >Schedule</span></NavLink></li>
+                <li><NavLink to='/b/results'><GradingIcon/><span >Results</span></NavLink></li>
+                <li><NavLink to='/b/messages'><ChatIcon/><span >Chats</span></NavLink></li>
+                <li><NavLink to='/b/announcements'><CampaignIcon/><span >Announcements</span></NavLink></li>
+                <li><NavLink to='/b/settings'><SettingsIcon/><span >Settings</span></NavLink></li>
 
             </ul>
             <button ><LogoutIcon/> <span >Logout</span></button>
